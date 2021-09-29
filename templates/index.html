@@ -1,45 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-	<style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>	
+	<style type="text/css">
 		#et1{
 			margin-bottom:10px;
-			background-color:red;
+			background-color:lightcoral;
 			font-size: 50 px;
 			text-align: center;
 		}
 
 	</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
-
+<style type="text/css">
+		#sensor{
+			margin-bottom:10px;
+			background-color:orange;
+			font-size: 50 px;
+			text-align: center;
+		}
+	</style>
+	<style type="text/css">
+		#sensor2{
+			margin-bottom:10px;
+			background-color:orange;
+			font-size: 50 px;
+			text-align: center;
+		}
+	</style>
 <title>EMBEBIDOS</title>
 </head>
-<body>
-
-<h2> 
-Sitemas Embebidos
- 	</h2>
+<body bgcolor="silver"> <!--cambiar color de la pagina-->
+<header>
+	<nav>
+		<ul id='menu'>
+	<li><a href="#">INICIO</a></li>
+	<li><a href="#">Embebidos</a></li>
+		</ul>
+	</nav>
+</header>
 <h1 id='et1'>
 	Universidad Nacional de Chimborazo
 </h1>
-<img id="imagen" src="/static/images/iot.png" alt="user">
-<img id="imagen2" src="https://www.unach.edu.ec/wp-content/uploads/2021/03/logo_unach_2021-02.png" alt="user">
-<h1>Sensor:</h><h id="sensor">--</h1>
-<button id = 'LED1On'type="button" onclick="LED1_On();">
+<h1 id='et2'><div align="center">
+ 	Ingenieria en Telecomunicaciones
+</h1></div>
+<h1 id='et3'><di align="center">
+	Sitemas Embebidos
+ 	</h1></div>
+ <h2>
+ 	Grupo 2:
+ 	<br />
+ 	 Lourdes Guailla
+ 	<br />
+ 	Jhonatan Lamiña
+ 	<br />
+ 	Anthony Rodríguez
+ 	<br />
+ 	Kelly Colcha
+
+ </h2>
+<div align="center"><img id="imagen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJd5tATXk18eOtX_prHGrU_SveFNMD5v_DYw&usqp=CAU" alt="user"></div>
+<!--<img id="imagen2" src="https://www.unach.edu.ec/wp-content/uploads/2021/03/logo_unach_2021-02.png" alt="user">-->
+
+<!--SENSORES-->
+<!--<BR>--> <!-- Salto de línea-->
+<h1>Sensor:</h1>
+	<h1 id="sensor">--</h1>
+<h1>Sensor 2:</h1>
+	<div align="center"><h1 id="sensor2">--</h1></div>
+
+<button id = 'LED1On'type="button" onmouseover="this.style.background='blue'; this.style.color='white'"onmouseout="this.style.background='blue'; this.style.color='white'"onclick="LED1_On();">
 LED1 ON!</button>
-<button id = 'LED1Off' type="button" onclick="LED1_Off();">
+
+
+<button id = 'LED1Off' type="button" style="background-color: red; border-color: black; color: yellow;" onclick="LED1_Off();">
 LED1_OFF!</button>
 
-<button id = 'LEDpause'type="button" onclick="LED1_pause();">
+<button id = 'LEDpause'type="button" style="background-color: aqua; border-color: black; color: white;"onclick="LED1_pause();">
 LED1 PAUSE!</button>
 
 <script>
-/*
+/*<img id="imagen" src="/static/images/iot.png" alt="user">-->
 function LED1_On() {
 	alert("led on");
 	console.log("led on");
-  
 }
 function LED1_Off(){
 	alert("led off");
@@ -47,8 +91,7 @@ function LED1_Off(){
 }
 */
 </script>
-
 <script src="/static/js/index.js"></script>
-
 </body>
 </html>
+
